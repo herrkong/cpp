@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "map": "cpp",
+        "unordered_map": "cpp",
+        "iterator": "cpp",
+        "__mutex_base": "cpp",
+        "memory": "cpp",
+        "mutex": "cpp"
+    }
+}
