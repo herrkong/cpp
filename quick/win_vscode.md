@@ -8,5 +8,12 @@ ctrl + p
 f12
 
 //回退一步
+alt + <- 
+
+
+// 截图
+win + shift + s
+
+
 
 

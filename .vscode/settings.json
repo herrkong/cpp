@@ -6,6 +6,7 @@
         "iterator": "cpp",
         "__mutex_base": "cpp",
         "memory": "cpp",
-        "mutex": "cpp"
+        "mutex": "cpp",
+        "thread": "cpp"
     }
 }

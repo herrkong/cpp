@@ -22,3 +22,7 @@ panic(value) --> 被recover捕获 value
 
 #### map 的key chan struct 这些都不能作为key  
 只有基本数据
+
+
+#### context waitgroup 
+

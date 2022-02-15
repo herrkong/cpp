@@ -16,3 +16,8 @@ mysql client --> server 维护一条长链接  连接器
 优化器  优先哪个索引 查找策略
 执行器 mysql 引擎 innnodb   底层数据结构 b+树
 
+#### mysql 联合索引 最左匹配原则
+https://segmentfault.com/a/1190000015416513
+
+KEY test_col1_col2_col3 on test(col1,col2,col3);
+SELECT * FROM test WHERE col1=“1” AND clo2=“2” AND clo4=“4”
