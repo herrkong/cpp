@@ -21,3 +21,10 @@ https://segmentfault.com/a/1190000015416513
 
 KEY test_col1_col2_col3 on test(col1,col2,col3);
 SELECT * FROM test WHERE col1=“1” AND clo2=“2” AND clo4=“4”
+
+#### mysql redis 数据一致性问题
+
+写操作 先写mysql再同步数据到redis
+读操作 先读redis redis中无存在 去查mysql 再把查询结果同步到redis
+
+

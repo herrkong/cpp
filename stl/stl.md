@@ -32,4 +32,8 @@ go实现 slice map sync.map
 
 
 
+#### stl的内存是在堆还是栈上
+
+#### 不停的给vector map push_back insert 迭代器会失效吗
+
 

@@ -7,6 +7,21 @@
         "__mutex_base": "cpp",
         "memory": "cpp",
         "mutex": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "type_traits": "cpp"
     }
 }
