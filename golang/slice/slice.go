@@ -10,7 +10,7 @@ func printslice(s []int) {
 	}
 }
 
-func main() {
-	s := []int{1, 2, 3}
-	printslice(s)
-}
+// func main() {
+// 	s := []int{1, 2, 3}
+// 	printslice(s)
+// }

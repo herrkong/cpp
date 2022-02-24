@@ -3,49 +3,79 @@
 #include <set>
 #include <map>
 #include <unordered_map>
+#include <deque>
 #include <list>
-#include <algorithm>
-#include "/home/darwinkong/code/cpp/public/cpp/cpp.hpp"
+#include <iostream>
 
 // quicksort
-// 递归
-// 左边元素都小于 pivot
-// 右边元素都大于 pivot
+// partition
 
-void QuickSort(int[] vec, int start, int end)
+//  Paritition1(int A[], int low, int high) {
+//    int pivot = A[low];
+//    while (low < high) {
+//      while (low < high && A[high] >= pivot) {
+//        --high;
+//      }
+//      A[low] = A[high];
+//      while (low < high && A[low] <= pivot) {
+//        ++low;
+//      }
+//      A[high] = A[low];
+//    }
+//    A[low] = pivot;
+//    return low;
+//  }
+
+int Partition(int a[], int start, int end)
 {
-    if (start > end)
+    printf("start=%d,end=%d\n", start, end);
+    int pivot = a[start];
+    while (start < end)
     {
-        int pivot = partition(vec, start, end);
-        QuickSort(vec, start, pivot - 1);
-        QuickSort(vec, pivot + 1, end);
+        // 从右向左找
+        while (start < end && a[end] >= pivot)
+        {
+            --end;
+        }
+
+        a[start] = a[end];
+
+        // 从左向右找
+        while (start < end && a[start] <= pivot)
+        {
+            ++start;
+        }
+        a[end] = a[start];
     }
-    return;
+    a[start] = pivot;
+    return start;
 }
 
-int partition(int[] vec, int start, int end)
+void PrintArray(int a[], int len)
 {
-    int pivotValue = vec[start];
-    int pivotPositon = start;
-
-    for (start < end){
-        for (start < end && vec[end] >= pivotValue; end--){
-            vec[start] = vec[end];
-        }
-
-        for (start < end && vec[start] >= pivotValue ; start++){
-            vec[end] = vec[start];
-        }
+    for (int i = 0; i < len; i++)
+    {
+        printf("%d,", a[i]);
     }
+    printf("\n");
+}
 
-    vec[start] = pivotValue;
-    return pivotPositon;
+void QuickSort(int a[], int start, int end)
+{
+    if (start < end)
+    {
+        int pivot = Partition(a, start, end);
+        printf("pivot=%d\n", pivot);
+        QuickSort(a, start, pivot - 1);
+        QuickSort(a, pivot + 1, end);
+    }
 }
 
 int main()
 {
-    int[] vec = {5, 3, 1, 4, 2};
-    QuickSort(vec, 0, 4);
-    PrintVec(vec);
+    int a[] = {5, 4, 2, 3, 1};
+    PrintArray(a, 5);
+    QuickSort(a, 0, 4);
+    PrintArray(a, 5);
     return 0;
 }

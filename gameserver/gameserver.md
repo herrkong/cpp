@@ -46,3 +46,28 @@ RobotServer  请求Ai机器人进入房间
 
 https://www.jianshu.com/p/82a81a220722
 
+
+
+
+#### 游戏设计原理和方法
+https://www.zhihu.com/column/dongliangqi
+
+#### 手游app的分类
+棋牌(大富翁) moba 射击  养成经营 策略 体育(fifa)
+#### moba 游戏
+multiplayer online Battle Arena Games
+多人实时在线游戏
+
+mmorpg 多人在线角色扮演
+
+#### slg游戏
+Simulation  Game  
+模拟仿真类游戏 涉及策略 养成 经营 
+三国
+
+实时pvp在线对战  player vs player 
+
+##### elo机制
+
+
+#### 游戏服务器架构  

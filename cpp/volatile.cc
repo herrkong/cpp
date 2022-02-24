@@ -1,5 +1,12 @@
 #include <stdio.h>
  
+// volatile 作用
+// 让编译器从内存中取值 而不是寄存器 
+
+// 多线程环境下 可能造成CPU寄存器中的值 和 内存中的值不一致
+
+
+
 int main()
 {
     int i = 10;

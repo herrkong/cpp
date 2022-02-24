@@ -14,3 +14,8 @@ type hchan struct {
 	sendq    waitq  // 发送等待队列
 	lock mutex // 互斥锁
 }
+
+
+
+####  有缓冲channel && 无缓冲channel
+

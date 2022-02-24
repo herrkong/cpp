@@ -8,6 +8,7 @@ import (
 func main() {
 	stop := make(chan bool)
 
+	// 开启一个协程中 写个死循环
 	go func() {
 		for {
 			select {

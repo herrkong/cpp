@@ -14,8 +14,19 @@ using namespace std;
 // unsigned long long int %llu
 // 
 
+class A{
+public:
+    int a;  // 4
+    char b;  // 1  8 
+    float c;  // 4  16 
+    void Print(); // 不占字节  0
+    virtual void Fight(); // 一个指针的大小 8个字节 24
+};
+
+
 
 int main(){
+    printf("sizeof(A)=%d\n",int(sizeof(A)));
     int a = 0;
     float b = 1;
     double c = 2;

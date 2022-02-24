@@ -28,3 +28,90 @@ public:
     void unlock() { pthread_mutex_unlock(&_M_mutex); }
 }
 
+
+####  系统性能监控
+
+top 
+
+内存 cpu 
+
+####  七层模型
+<!-- https://segmentfault.com/a/1190000014044351 -->
+
+osi七层模型
+
+tcp ip  
+1 应用层   telnet  http   ftp
+2 表示层
+3 会话层 
+
+4传输层  tcp udp 
+5 网络层 ip  
+
+
+6链路层
+7物理层
+
+
+#### 网络 
+ 三次握手 四次挥手 
+send syn reponse ack
+
+ client  --> server  1
+
+ server --> client  2 
+
+ client --> server  3 
+
+ 四次挥手 
+send fin response ack 
+ client --> server  1
+
+ server --> client  2
+
+ server --> client  3
+
+ client -->  server  4
+
+报文字段  
+滑动窗口 
+流量控制
+拥塞控制 tcp
+
+netstat   
+established  heartbeat
+close 
+timewait  
+
+保活计时器
+
+
+#### tcp和udp的区别
+
+tcp基于连接 三次握手 udp在发送数据前没有建立连接 也没有ack的确认机制
+udp实时性 传输大量数据比较合适
+
+
+#### tcp服务器最大并发连接数
+端口上限65535
+
+tcp连接 client ip port server ip port 
+linux 文件描述符限制 
+
+ulimit -n 一个进程最多打开的文件数
+
+##### 为什么TIME_WAIT状态还需要等2MSL后才能返回到CLOSED状态
+2msl 生存时间之内
+ack确认包可能会丢失 用来重发确认
+server没有收到ack 会重发fin 
+
+
+
+#### 线程同步
+
+https://zhuanlan.zhihu.com/p/101050199
+
+互斥锁
+条件变量
+读写锁
+信号量
